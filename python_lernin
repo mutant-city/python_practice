@@ -1,0 +1,26 @@
+changing class varaibles:
+https://www.geeksforgeeks.org/g-fact-42-changing-class-members-python/
+
+default params:
+http://effbot.org/zone/default-values.htm
+
+copy/deep copy:
+everything is a reference in python
+copy-only first level
+deepcopy-all levels
+https://realpython.com/copying-python-objects/
+https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/
+
+python imports:
+https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html
+
+
+input vs raw_input:
+https://www.python-course.eu/input.php
+
+
+python formatting output
+tuple/modulus(old way): http://www.informit.com/articles/article.aspx?p=28790&seqNum=2
+.format(newer way): https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3
+theres also template substitution
+best practices: https://realpython.com/python-string-formatting/

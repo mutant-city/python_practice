@@ -113,3 +113,20 @@ class Game:
             'top_left': lambda self,x,y:self.grid[y-1][x-1]
         }
 
+if __name__ == "__main__": 
+
+    game = Game()
+    width = int(sys.argv[1])
+    height = int(sys.argv[2])
+    iterations = int(sys.argv[3])
+    if (len(sys.argv)>= 5):
+        tune = int(sys.argv[4])
+    else:
+        tune = 30
+
+    print("Running with width: %i, height: %i, iterations: %i, tune: %i" % (width,height,iterations,tune))
+    val = raw_input("Press any key to continue or x to exit: ")
+    if(val == "x"): 
+        print("exiting")
+        quit()
+    game.run(width,height,iterations,tune)
