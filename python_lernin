@@ -24,3 +24,84 @@ tuple/modulus(old way): http://www.informit.com/articles/article.aspx?p=28790&se
 .format(newer way): https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3
 theres also template substitution
 best practices: https://realpython.com/python-string-formatting/
+
+
+reduction, find all elements in a list that are also in another list
+out = [i for n,i in enumerate(substring) if i not in substring[:n] ] => returns a list that is ordered without duplicates
+
+common operations
+-----------
+sorted(<iterable>)
+sum(<iterable>)
+len(<iterable>)
+map(int, <iterable>)   => [3,2,1]    converts from string to int array(note:always outputs a list even if map an set)
+
+
+
+strings(NOT mutable)
+------
+concat = +
+repeat = *
+slice = 'zasd'[0] => 'z, 'zasd'[-1] => 'd' , 'zasd'[-2] => 's' 'zasd'[1:2]=>'as' 'zasd'[:1] => 'za' 'zasd'[1:] => 'asd'
+lentgh => len('string') => 6
+.split(<separator>) => splits on the separator
+','.join(['string', 'here']) => 'string,here'
+''.join(<iterable>)  or ','.join(<iterable>)
+
+
+lists(ordered, mutable, non-unique, mixed type)
+--------
+x = [1,2,3,4]
+x.append(<element to append>) or x + [<element/s to append]
+del x[<index>]
+x.sort()
+x.reverse()
+[1,2,3] * 3 => [1,2,3,1,2,3,1,2,3]
+x.pop() => pop off end(would remove the 5) => can use .pop(<location in list>) to remove a specific element
+append and pop make a lifo queue
+append and pop(0) make a fifo queue
+
+
+sets(unordered,unique, mixed type)
+----------
+x = {}
+x = {(1,2)} => creates a set with a tuple inside
+x = set(["some", "list"]) => will remove dupes
+x.add('item') => add a single element => can't add a list or dict or another set, must be primitive: int, str, tuple
+x.pop() => removes random element
+x.update(<some iterable>) => will join the two structures, removing duplicates (note use add for single elements or it will unpack and add to set)
+x.discard(<some val>)
+x.remove(<some val>) => note remove throws error while discard doesn't, if element not present
+x.union(), .intersect, .difference...(<some iterable set or list>)
+  Values which exist in a or b = union
+  Values which exist in a and b = intersect
+  Union and Intersect are symmetic methods
+  Values which exist in x but not in y = difference => x.difference(y)
+
+
+tuples(immutable, mixed type, ordered)
+-------
+x=(1,) => if have one element needs a comma
+x= (1,2,'a','b')
+x[0] => 1 , x[1:2] => 2,'a'
+We can't update or change existing tuples since they are immutable. However can create new from old
+tuple4 = tuple2 + tuple3
+
+
+dictionary(hash table, unique keys)
+--------
+x[<key>] => returns the <value>
+x[<key>] = <value> => changes the value
+del x[<key>]
+x.clear()  => emptys the dict
+del x => deletes entire dict
+
+
+
+list comprehension
+------
+[x for x in arr if x in A] =>
+
+
+
+

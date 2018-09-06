@@ -1,0 +1,65 @@
+algorithm help
+--------
+
+prime numbers:
+----
+is_prime means it can't be divided by any other number:
+def is_prime(number):
+    """Return True if *number* is prime."""
+    for element in range(number):
+        if number % element == 0:
+            return False
+
+    return True
+
+
+find all elements in a list that are also in another list:
+----
+out = [i for n,i in enumerate(substring) if i not in substring[:n] ] => returns a list that is ordered without duplicates
+or if order doesn't matter cast the list to a set
+set(list)
+
+
+lifo/fifo queues
+----
+use list
+append and pop make a lifo queue
+append and pop(0) make a fifo queue
+
+
+reverse a string
+------
+[x[a] for a in range(len(x)-1,-1, -1)]
+x[::-1]
+
+
+circular list python
+-----
+l.insert(0, l.pop())
+
+
+sort a string(integers or numbers )
+-----
+''.join(sorted('12341123')) => asc
+''.join(sorted('12341123', reverse=True))
+(note for int's be sure to wrap in an int())
+
+capitalize first letter of every word
+-----------
+re.sub(r'^(.)|\s(.)', lambda x: x.group(0).upper(), "hello world")
+re.sub(r'\b(\w)', lambda x: x.group(0).upper(), "hello world")
+"hello world".title()
+
+
+output print with formatting
+("%d:%d" % (num / 60, num % 60))
+
+to check
+---
+check beginning and end of array
+check boolean logic
+
+quick sort
+----
+Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation
+ O(n log n) worst case O(n^2)
